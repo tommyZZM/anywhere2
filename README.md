@@ -1,11 +1,16 @@
 Anywhere 随启随用的静态文件服务器
-==============================
+=====================
 
 Running static file server anywhere. 随时随地将你的当前目录变成一个静态文件服务器的根目录。
 
+Anywhere(v2)
+============
+
+- add error handle on startup 添加启动时的异常处理,例如端口占用
+
 ## Installation
 ```
-npm install anywhere -g
+npm install anywhere2 -g
 ```
 
 ## Execution
