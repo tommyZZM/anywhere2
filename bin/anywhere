@@ -29,7 +29,7 @@ if (argv.help) {
   console.log("  anywhere // 8000 as default port, current folder as root");
   console.log("  anywhere 8888 // 8888 as port");
   console.log("  anywhere -p 8989 // 8989 as port");
-  console.log("  anywhere -o // open with browser");
+  console.log("  anywhere -o // open url with default browser");
   console.log("  anywhere -h localhost // localhost as hostname");
   console.log("  anywhere -d /home // /home as root");
   process.exit(0);
@@ -79,6 +79,7 @@ var getIPAddress = function () {
 var app = connect();
 app.use(function (req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader('Last-Modified', (new Date()).toUTCString());
   next();
 });
 app.use(serveStatic(argv.dir, {'index': ['index.html']}));

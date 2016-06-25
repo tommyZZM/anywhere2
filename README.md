@@ -18,8 +18,8 @@ npm install anywhere2 -g
 $ anywhere
 // or with port
 $ anywhere -p 8000
-// or start it but silent(don't open browser)
-$ anywhere -s
+// or start it and open url with default browser
+$ anywhere -o
 // or with hostname
 $ anywhere -h localhost -p 8888
 // or with folder
